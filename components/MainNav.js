@@ -30,15 +30,15 @@ export default function MainNav() {
               <Link href="/search" passHref legacyBehavior><Nav.Link>Advanced Search</Nav.Link></Link>
             </Nav>
             <Form className="d-flex" onSubmit={handleSearch}>
-            <Form.Control
-              type="search"
-              name="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button class="btn btn-success" type="submit">Search</Button>
-          </Form>
+              <Form.Control
+                type="search"
+                name="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button class="btn btn-success" type="submit">Search</Button>
+            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>

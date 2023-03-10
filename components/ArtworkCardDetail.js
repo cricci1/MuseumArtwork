@@ -1,9 +1,8 @@
-import { Card, Button } from 'react-bootstrap'
-import Link from 'next/link';
+import { Card } from 'react-bootstrap'
 import Error from 'next/error';
 import useSWR from 'swr';
 
-export default function ArtworkCard({ objectID }) {
+export default function ArtworkCardDetail({ objectID }) {
 
     const fetcher = (url) => fetch(url).then((res) => res.json());
     const { data, error } = useSWR(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`, fetcher);
