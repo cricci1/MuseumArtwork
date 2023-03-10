@@ -6,7 +6,7 @@ export default function AdvancedSearch() {
 
     const router = useRouter();
 
-    const { register, handleSubmit, setValue } = useForm({
+    const { register, handleSubmit, formState: { errors }  } = useForm({
         defaultValues: {
             q: "",
             searchBy: "title",
@@ -55,7 +55,7 @@ export default function AdvancedSearch() {
                     <Col>
                         <Form.Group className="mb-3">
                             <Form.Label>Search Query</Form.Label>
-                            <Form.Control type="text" placeholder="" name="q" {...register("q")} />
+                            <Form.Control type="text" placeholder="" name="q" {...register("q", { required: true })} className={errors.q?.type === "required" ? "is-invalid" : ""} />
                         </Form.Group>
                     </Col>
                 </Row>
