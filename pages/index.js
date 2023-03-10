@@ -1,3 +1,14 @@
+/*********************************************************************************
+*  BTI425 – Assignment 4
+*  I declare that this assignment is my own work in accordance with Seneca Academic Policy.  
+*  No part of this assignment has been copied manually or electronically from any other source
+*  (including web sites) or distributed to other students.
+* 
+*  Name: Christian Ricci Student ID: 105669212 Date: 3/09/23
+*
+********************************************************************************/ 
+
+
 import { Container, Row, Col } from "react-bootstrap"
 
 export default function Home() {
