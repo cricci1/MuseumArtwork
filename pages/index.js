@@ -13,10 +13,10 @@ import { Container, Row, Col } from "react-bootstrap"
 export default function Home() {
   return (
     <>
-    <Container maxWidth="lg">
+    <Container maxwidth="lg">
       <Row>
         <Col>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg" alt="MET Building" class="img-fluid rounded" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg" alt="MET Building" className="img-fluid rounded" />
         <br />
         <br />
         </Col>

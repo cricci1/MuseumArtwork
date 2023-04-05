@@ -49,7 +49,7 @@ export default function MainNav() {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button class="btn btn-success" type="submit">Search</Button>
+              <Button className="btn btn-success" type="submit">Search</Button>
             </Form>
             &nbsp;
             <Nav>
