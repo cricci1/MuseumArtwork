@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import { useAtom } from 'jotai';
 import { searchHistoryAtom } from '@/store';
+import { addtoHistory } from "@/lib/userData.js";
 
 export default function AdvancedSearch() {
 
@@ -20,7 +21,7 @@ export default function AdvancedSearch() {
         }
     });
 
-    function submitForm(data) {
+    async function submitForm(data) {
 
         let queryString = "";
 
@@ -44,7 +45,7 @@ export default function AdvancedSearch() {
 
         queryString += `&q=${data.q}`
 
-        setSearchHistory(current => [...current, queryString]);
+        setSearchHistory(await addtoHistory(queryString)) 
         router.push(`/artwork?${queryString}`)
 
     }

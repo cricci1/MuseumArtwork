@@ -3,11 +3,13 @@ import { useAtom } from 'jotai';
 import { searchHistoryAtom } from '@/store';
 import { useRouter } from 'next/router';
 import styles from '@/styles/History.module.css';
+import { removefromHistory } from '@/lib/userData.js';
 
 export default function History() {
 
     const router = useRouter();
     const [searchHistory, setSearchHistory] = useAtom(searchHistoryAtom);
+    if(!searchHistory) return null;
 
     let parsedHistory = [];
 
@@ -26,17 +28,12 @@ export default function History() {
 
     }
 
-    function removeHistoryClicked(e, index) {
+    async function removeHistoryClicked(e, index) {
 
         e.stopPropagation(); // stop the event from trigging other events
 
-        setSearchHistory(current => {
+        setSearchHistory(await removefromHistory(searchHistory[index])) 
 
-            let x = [...current];
-            x.splice(index, 1)
-            return x;
-
-        });
     }
 
     return (
