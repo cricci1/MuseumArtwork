@@ -41,7 +41,7 @@ export default function History() {
             <ListGroup>
                 {parsedHistory.length > 0 ? (
                     parsedHistory.map((historyItem, index) => (
-                        <ListGroup.Item onClick={(e) => historyClicked(e, index)} className={styles.historyListItem}>
+                        <ListGroup.Item key={index} onClick={(e) => historyClicked(e, index)} className={styles.historyListItem}>
                             {Object.keys(historyItem).map(key => (<>{key}: <strong>{historyItem[key]}</strong>&nbsp;</>))}
                             <Button className="float-end" variant="danger" size="sm" onClick={e => removeHistoryClicked(e, index)}>&times;</Button>
                         </ListGroup.Item>
