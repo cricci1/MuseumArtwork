@@ -64,54 +64,26 @@ export default function ArtworkCardDetail({ objectID }) {
 
                 <Card.Text>
 
-                    {data.objectDate ? (
-                        <p><b>Date:</b> {data.objectDate}</p>
-                    ) : (
-                        <p><b>Date:</b> N/A</p>
-                    )}
-
-                    {data.classification ? (
-                        <p><b>Classification:</b> {data.classification}</p>
-                    ) : (
-                        <p><b>Classification:</b> N/A</p>
-                    )}
-
-                    {data.medium ? (
-                        <p><b>Medium:</b> {data.medium}</p>
-                    ) : (
-                        <p><b>Medium:</b> N/A</p>
-                    )}
+                {data.objectDate ? <><b>Date:</b> {data.objectDate}<br/></> : <><b>Date:</b> N/A<br/></>}
+                {data.classification ? <><b>Classification:</b> {data.classification}<br/></> : <><b>Classification:</b> N/A<br/></>}
+                {data.medium ? <><b>Medium:</b> {data.medium}<br/></> : <><b>Medium:</b> N/A<br/></>}
 
                 </Card.Text>
 
-                <br />
                 <br />
 
                 <Card.Text>
 
-                    {data.artistDisplayName ? (
-                        <div>
-                            <p><b>Artist:</b> {data.artistDisplayName} ( <a href={data.artistWikidata_URL} target="_blank" rel="noreferrer" > wiki</a> ) </p>
-                        </div>
-                    ) : (
-                        <p><b>Artist:</b> N/A</p>
-                    )}
+                    {data.artistDisplayName ? <><b>Artist:</b> {data.artistDisplayName}<br/></> : <><b>Artist:</b> N/A<br/></>}
+                    {data.creditLine ? <><b>Credit Line:</b> {data.creditLine}<br/></> : <><b>Credit Line:</b> N/A<br/></>}
+                    {data.dimensions ? <><b>Dimensions:</b> {data.dimensions}<br/></> : <><b>Dimensions:</b> N/A<br/></>}
 
-                    {data.creditLine ? (
-                        <p><b>Credit Line:</b> {data.creditLine}</p>
-                    ) : (
-                        <p><b>Credit Line:</b> N/A</p>
-                    )}
-
-                    {data.dimensions ? (
-                        <p><b>Dimensions:</b> {data.dimensions}</p>
-                    ) : (
-                        <p><b>Dimensions:</b> N/A</p>
-                    )}
+                    <br />
 
                     <Button variant={showAdded ? "primary" : "outline-primary"} onClick={favouritesClicked}> {showAdded ? "+ Favourite (added)" : "+ Favourite"} </Button>   
 
                 </Card.Text>
+                
             </Card.Body>
         </Card>
     )

@@ -39,23 +39,9 @@ export default function ArtworkCard({objectID}) {
 
                 <Card.Text>
 
-                {data.objectDate ? (
-                    <p><b>Date:</b> {data.objectDate}</p>
-                ) : (
-                    <p><b>Date:</b> N/A</p>
-                )}
-
-                {data.classification ? (
-                    <p><b>Classification:</b> {data.classification}</p>
-                ) : (
-                    <p><b>Classification:</b> N/A</p>
-                )}
-
-                {data.medium ? (
-                    <p><b>Medium:</b> {data.medium}</p>
-                ) : (
-                    <p><b>Medium:</b> N/A</p>
-                )}
+                {data.objectDate ? <><b>Date:</b> {data.objectDate}<br/></> : <><b>Date:</b> N/A<br/></>}
+                {data.classification ? <><b>Classification:</b> {data.classification}<br/></> : <><b>Classification:</b> N/A<br/></>}
+                {data.medium ? <><b>Medium:</b> {data.medium}<br/></> : <><b>Medium:</b> N/A<br/></>}
 
                 </Card.Text>
 
