@@ -1,4 +1,4 @@
-# Museum Art Website
+# Museum Artwork Website
 
 This is a Museum Artwork Website that I made using NextJS, React, Bootstrap, MongoDB and Jotai.
 
